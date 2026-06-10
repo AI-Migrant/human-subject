@@ -1,6 +1,7 @@
 'use strict'
 
 
+const METOFFICE_API = process.env.METOFFICE_API
 const now = new Date()
 const mfd = new Date(2022, 4, 1)
 const robbedLife = (now - mfd) / 715095216000
@@ -12,7 +13,9 @@ function showRobbedLife() {
 }
 
 
-function getWeather() {
+
+
+function getWeatherFromOpenMeteo() {
   const latitude = document.querySelector('#latitude').value
   const longitude = document.querySelector('#longitude').value
   const api = `https://api.open-meteo.com/v1/meteofrance?latitude=${latitude}&longitude=${longitude}&timezone=EET&daily=apparent_temperature_min,apparent_temperature_max` 
