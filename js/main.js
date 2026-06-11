@@ -6,11 +6,10 @@ const METOFFICE_SITSPECIFIC_API = "https://data.hub.api.metoffice.gov.uk/sitespe
 const now = new Date()
 const mfd = new Date(2022, 4, 1)
 const robbedLife = (now - mfd) / 715095216000
-const robbedLifeDisplay = document.querySelector("#robbed-life")
 
 
 function showRobbedLife() {
-  robbedLifeDisplay.textContent = (robbedLife * 100).toFixed(1) + "%"
+  document.querySelector("#robbed-life").textContent = (robbedLife * 100).toFixed(6) + "%"
 }
 
 
@@ -44,6 +43,7 @@ function getWeatherFromOpenMeteo() {
 }
 
 window.onload = () => {
+  setInterval(showRobbedLife, 1000)
   getWeatherFromOpenMeteo()
   showRobbedLife()
 }
