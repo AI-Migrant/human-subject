@@ -24,7 +24,7 @@ function getWeatherFromOpenMeteo() {
   fetch(api)
     .then(response => response.json())
     .then(data => {
-      const output = document.querySelector('#weatherDisplay')
+      const output = document.querySelector('#open-meteo')
       let s = ''
       const daily = data.daily
       const time = daily.time
@@ -44,6 +44,6 @@ function getWeatherFromOpenMeteo() {
 }
 
 window.onload = () => {
-  getWeather()
+  getWeatherFromOpenMeteo()
   showRobbedLife()
 }
