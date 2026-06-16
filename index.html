@@ -11,12 +11,39 @@
     <div class="weather">
       <input type='number' id='latitude' placeholder='Latitude' min='-90' max='90' value='51.52' />
       <input type='number' id='longitude' placeholder='Longitude' min='-180' max='180' value='-0.13' />
-      <button onclick='getWeatherFromMetOffice()'>Lookup</button>
+      <button onclick='getWeather()'>Lookup</button>
+    </div>
+    
+    <table class="weather">
+      <thead id="open-meteo-thead">
+      </thead>
+      <tbody id="open-meteo-tbody"></tbody>
+    </table>
 
+    <div class="container-for-two weather">
       <table>
-        <thead id="open-meteo-thead">
+        <thead id="met-office-thead-1">
+          <tr>
+            <td>time</td>
+            <td>temp</td>
+            <td>p. prob</td>
+            <td>p. rate</td>
+          </tr>
         </thead>
-        <tbody id="open-meteo-tbody"></tbody>
+        <tbody id="met-office-tbody-1"></tbody>
+      </table>
+
+      
+      <table>
+        <thead id="met-office-thead-2">
+          <tr>
+            <td>time</td>
+            <td>temp</td>
+            <td>p. prob</td>
+            <td>p. rate</td>
+          </tr>
+        </thead>
+        <tbody id="met-office-tbody-2"></tbody>
       </table>
     </div>
     

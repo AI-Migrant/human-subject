@@ -1,0 +1,36 @@
+table {
+  border-collapse: collapse;
+}
+
+
+th, td {
+  border: 1px solid black;
+  padding: 0 0.5em;
+  text-align: center
+}
+
+
+.container-for-two {
+  width: 90%;
+  display: flex;
+  gap: 1em; /* Optional spacing between tables */
+  margin: auto;
+}
+
+
+.container-for-two table {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+
+.weather, .robbed-life {
+  text-align: center;
+  margin: 1% auto;
+}
+
+
+.robbed-life {
+  color: crimson;
+  font-size: larger;
+}
