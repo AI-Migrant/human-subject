@@ -34,8 +34,8 @@ const getWeatherFromMeteoFrance = () => {
   fetch(url)
     .then(response => response.json())
     .then(data => {
-      const thead = document.querySelector('#open-meteo-thead')
-      const tbody = document.querySelector("#open-meteo-tbody")
+      const thead = document.querySelector('#meteofrance-thead')
+      const tbody = document.querySelector("#meteofrance-tbody")
       const daily = data.daily
       const time = daily.time
       const min = daily.apparent_temperature_min
@@ -53,7 +53,7 @@ const getWeatherFromMeteoFrance = () => {
       tbody.appendChild(makeTr("td", min.slice(0, 4)))
     })
     .catch(error => {
-      console.log("Error from getWeatherFromOpenMeteo()")
+      console.log("Error from getWeatherFromMeteoFrance()")
       console.log(error)
     })
 }
@@ -89,7 +89,7 @@ const getWeatherFromMetOffice = () => {
         return table
       }
 
-      const container = document.querySelector("#met-office-container")
+      const container = document.querySelector("#metoffice-container")
       container.appendChild(makeTable(timeSeries.slice(0, timeSeries.length / 2)))
       container.appendChild(makeTable(timeSeries.slice(timeSeries.length / 2)))
     })
@@ -104,7 +104,7 @@ const getWeather = () => {
   latitude = document.querySelector('#latitude').value
   longitude = document.querySelector('#longitude').value
   getWeatherFromMetOffice()
-  getWeatherFromOpenMeteo()
+  getWeatherFromMeteoFrance()
 }
 
 

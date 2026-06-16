@@ -23,14 +23,14 @@ th, td {
 
 
 @media (min-width: 800px) {
-  #met-office-container {
+  #metoffice-container {
     width: 95%;
     display: flex;
     margin: auto;
   }
 
 
-  #met-office-container table {
+  #metoffice-container table {
     width: 46%;
     box-sizing: border-box;
     font-size: small;
