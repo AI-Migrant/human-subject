@@ -1,24 +1,30 @@
+body {
+  background-color: black;
+  color: green;
+}
+
 table {
   border-collapse: collapse;
 }
 
 
 th, td {
-  border: 1px solid black;
+  border: 1px solid darkblue;
   padding: 0 0.5em;
   text-align: center
 }
 
 
-.container-for-two {
+#met-office-container {
   width: 90%;
   display: flex;
-  gap: 1em; /* Optional spacing between tables */
+  gap: 1em;
   margin: auto;
+  font-size: small;
 }
 
 
-.container-for-two table {
+#met-office-container table {
   width: 50%;
   box-sizing: border-box;
 }

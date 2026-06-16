@@ -73,26 +73,27 @@ const getWeatherFromMetOffice = () => {
   })
     .then(response => response.json())
     .then(data => {
-      const thead = document.querySelector('#met-office-thead')
       const timeSeries = data.features[0].properties.timeSeries
 
 
-      const fillTable = (series, tableNum) => {
-        const tbody = document.querySelector(`#met-office-tbody-${tableNum}`)
+      const makeTable = (series) => {
+        const table = document.createElement("table")
+        const thead = document.createElement("thead")
+        thead.appendChild(makeTr("th", ["Time", "Temp", "P. Prob", "P. Rate"]))
+        table.appendChild(thead)
+        const tbody = document.createElement("tbody")
+        table.appendChild(tbody)
         
         for (const s of series) {
-          const a = []
-          a.push(s.time.substring(8, 16))
-          a.push(s.feelsLikeTemperature)
-          a.push(s.probOfPrecipitation)
-          a.push(s.precipitationRate)
-          tbody.appendChild(makeTr("td", a))
+          tbody.appendChild(makeTr("td", [s.time.substring(8, 16), s.feelsLikeTemperature, s.probOfPrecipitation, s.precipitationRate]))
         }
-      }
-      
 
-      fillTable(timeSeries.slice(0, timeSeries.length / 2), 1)
-      fillTable(timeSeries.slice(timeSeries.length / 2), 2)
+        return table
+      }
+
+      const container = document.querySelector("#met-office-container")
+      container.appendChild(makeTable(timeSeries.slice(0, timeSeries.length / 2)))
+      container.appendChild(makeTable(timeSeries.slice(timeSeries.length / 2)))
     })
     .catch(error => {
       console.log("Error from getWeatherFromMetOffice()")
