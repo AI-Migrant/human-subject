@@ -1,11 +1,12 @@
 body {
   background-color: black;
   color: green;
+  text-align: center;
 }
 
 table {
   border-collapse: collapse;
-  margin: 1% auto;
+  margin: 0.5% auto;
   text-align: center;
 }
 
@@ -25,13 +26,12 @@ th, td {
   #met-office-container {
     width: 95%;
     display: flex;
-    gap: 1em;
     margin: auto;
   }
 
 
   #met-office-container table {
-    width: 50%;
+    width: 46%;
     box-sizing: border-box;
     font-size: small;
   }
