@@ -1,12 +1,12 @@
 body {
   background-color: black;
   color: green;
-  text-align: center;
 }
 
 table {
   border-collapse: collapse;
   margin: 1% auto;
+  text-align: center;
 }
 
 
