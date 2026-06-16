@@ -85,7 +85,7 @@ const getWeatherFromMetOffice = () => {
         table.appendChild(tbody)
         
         for (const s of series) {
-          tbody.appendChild(makeTr("td", [s.time.substring(8, 16), s.feelsLikeTemperature, s.probOfPrecipitation, s.precipitationRate]))
+          tbody.appendChild(makeTr("td", [s.time.substring(8, 13), s.feelsLikeTemperature, s.probOfPrecipitation, s.precipitationRate]))
         }
 
         return table

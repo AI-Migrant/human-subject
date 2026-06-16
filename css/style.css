@@ -10,17 +10,16 @@ table {
 
 th, td {
   border: 1px solid darkblue;
-  padding: 0 0.5em;
   text-align: center
 }
 
 
 #met-office-container {
-  width: 90%;
+  width: 95%;
   display: flex;
   gap: 1em;
   margin: auto;
-  font-size: small;
+  font-size: 0.6em;
 }
 
 
