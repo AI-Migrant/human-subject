@@ -14,21 +14,6 @@ th, td {
 }
 
 
-#met-office-container {
-  width: 95%;
-  display: flex;
-  gap: 1em;
-  margin: auto;
-  font-size: 0.6em;
-}
-
-
-#met-office-container table {
-  width: 50%;
-  box-sizing: border-box;
-}
-
-
 .weather, .robbed-life {
   text-align: center;
   margin: 1% auto;
@@ -38,4 +23,21 @@ th, td {
 .robbed-life {
   color: crimson;
   font-size: larger;
+}
+
+
+@media (max-width: 767px) {
+  #met-office-container {
+    width: 95%;
+    display: flex;
+    gap: 1em;
+    margin: auto;
+    font-size: 0.6em;
+  }
+
+
+  #met-office-container table {
+    width: 50%;
+    box-sizing: border-box;
+  }
 }
