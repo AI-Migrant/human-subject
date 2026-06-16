@@ -22,7 +22,7 @@ th, td {
 }
 
 
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   #metoffice-container {
     width: 95%;
     display: flex;
